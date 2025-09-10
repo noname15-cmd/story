@@ -1,0 +1,59 @@
+/* 🌌 Обложка */
+body.cover {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(145deg, #fceabb, #f8b500, #e0c3fc, #8ec5fc);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 📖 Контент на обложке */
+.cover-content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ✨ Название книги */
+.book-title {
+  font-size: 60px;
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255,215,0,0.8),
+               0 0 35px rgba(255,200,0,0.6);
+  margin-bottom: 15px;
+}
+
+/* Подзаголовок */
+.book-subtitle {
+  font-size: 20px;
+  color: #fff8dc;
+  margin-bottom: 40px;
+}
+
+/* 🔘 Кнопка "Начать читать" */
+.start-button {
+  padding: 14px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
