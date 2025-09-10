@@ -200,4 +200,10 @@ a.button:hover {
   }
 }
 
+.menu-button {
+  background: red !important;   /* временно делаем красной */
+  z-index: 9999;                /* всегда поверх всего */
+}
+
   
+
