@@ -1,97 +1,15 @@
-/* 🌸 Фон */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #fceabb, #f8b500, #fbc2eb, #e6dee9);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
-  color: #333;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ✨ Заголовок */
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  color: #d4af37; /* золотой */
-  margin-top: 20px;
-  text-shadow: 0 0 8px rgba(212,175,55,0.6),
-               0 0 18px rgba(255,223,128,0.5);
-}
-
-/* 📖 Текст */
-.text-box {
-  font-size: 18px;
-  line-height: 1.8;
-  background: rgba(255, 255, 255, 0.85);
-  color: #2c3e50;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin-top: 20px;
-  text-align: left;
-}
-
-.text-box p::first-letter {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-weight: bold;
-  color: #d4af37;
-  margin-right: 6px;
-}
-
-/* 🌿 Картинки */
-img {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 14px;
-  margin: 20px 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
-}
-
-/* 🎵 Аудио */
-audio {
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-  padding: 6px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-}
-
-/* 🔘 Контейнер с кнопками */
+/* Контейнер для кнопок */
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;  /* ← центр → */
   align-items: center;
-  gap: 25px;
-  margin-top: 30px;
-  flex-wrap: wrap; /* кнопки не будут съезжать */
+  width: 100%;
+  max-width: 500px;   /* ограничиваем ширину */
+  margin: 30px auto 20px;
+  padding: 0 20px;
 }
 
-/* Кнопки-стрелки */
+/* Стрелки */
 a.button {
   width: 55px;
   height: 55px;
@@ -113,7 +31,7 @@ a.button:hover {
   box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
-/* Центральная кнопка (меню) */
+/* Центральная кнопка меню */
 .scene-menu {
   position: relative;
 }
@@ -125,7 +43,7 @@ a.button:hover {
   border: none;
   background: linear-gradient(145deg, #fbc2eb, #f6d365);
   color: #2c3e50;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -173,37 +91,17 @@ a.button:hover {
 }
 
 /* 📱 Адаптив для телефона */
-@media (max-width: 768px) {
-  .text-box {
-    font-size: 16px;
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
+@media (max-width: 600px) {
   .buttons {
-    gap: 15px;
+    max-width: 100%;
+    padding: 0 10px;
   }
 
-  a.button {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-  }
-
-  .menu-button {
+  a.button, .menu-button {
     width: 50px;
     height: 50px;
     font-size: 18px;
   }
 }
 
-.menu-button {
-  background: red !important;   /* временно делаем красной */
-  z-index: 9999;                /* всегда поверх всего */
-}
-
-  
 
